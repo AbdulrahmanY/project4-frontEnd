@@ -1,0 +1,45 @@
+.sidenav{
+    display: flex;
+      flex-direction: row;
+      gap: 5px;
+      justify-content: center;  
+}
+.btn-admin {
+    width: 80px;
+    height: 30px;
+    background-color: rgb(131, 131, 131);
+    color: #2a2e33;
+}
+table {
+    margin-top: 30px;
+    width: 100%;
+    /* margin-left: 100px; */
+    text-align: center;
+    font-size: medium;
+  }
+  .btn-delete{
+      /* margin-right: 50px; */
+    width: 80px;
+    /* height: 30px; */
+  }
+  .btn-delete:hover{
+    /* margin-right: 50px; */
+    color: red;
+  /* height: 30px; */
+}
+  .table-game{
+      
+  }
+  .btn-add-game{
+    width: 130px;
+  }
+  .btn-admin:hover{
+      color: white;
+  }
+  .input-newGame{
+    height: 30px;
+    width: 600px;
+  }
+  .form-addGame{
+    margin-left: 230px;
+  }

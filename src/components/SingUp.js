@@ -3,7 +3,7 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {logIn} from "../reducers/users/actions"
+import {logIn,signUp} from "../reducers/users/actions"
 function SingUp (){
     const [name, setName] = useState("")
     const [username, setUserName] = useState("")
@@ -29,8 +29,8 @@ function SingUp (){
         axios.post("http://localhost:8080/users",data)
         .then(response=>{
             console.log(response.data);
-            dispatch(logIn(response.data))
-            navigate("/")
+            dispatch(signUp(response.data))
+            navigate("/SignIn")
         })
         .catch(err=>{setErrMsg(err.response.data)})
     }
@@ -39,11 +39,12 @@ function SingUp (){
     return(
         <div className="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
         <div className="wrapper wrapper--w680">
-            <div className="card card-1">
-                <div className="card-heading"></div>
-                <div className="card-body">
-                    <h2 className="title">Registration Info</h2>
+            <div className="card1 card-1">
+                <div className="card-heading1"></div>
+                <div className="card-body1">
+                    <h2 className="title1">Registration Info</h2>
                     <form method="POST">
+                        <p className="p-err">{errMsg}</p>
                         <div className="input-group">
                             <input className="input--style-1" type="text" placeholder={requiredField.length>1?requiredField:"Name"} name="name"  onChange={(e) => {
               setName(e.target.value.trim());
@@ -75,7 +76,7 @@ function SingUp (){
                             </div>
                         </div>
                         <div class="p-t-20">
-                            <button class="btn btn--radius btn--green" type="button" onClick={submit}>Submit</button>
+                            <button class="btn1 btn--radius1 btn--green" type="button" onClick={submit}>Submit</button>
                         </div>
                     </form>
                 </div>

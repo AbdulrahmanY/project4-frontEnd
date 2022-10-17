@@ -26,7 +26,7 @@ const BottomBar = () => {
             to="/SingUp"
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
-            <IoTrendingUp className={styles.icon} />
+            
             <span>SingUp</span>
           </NavLink>
         </li>
@@ -35,7 +35,7 @@ const BottomBar = () => {
             to="/SignIn"
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
-            <IoHeart className={styles.icon} />
+            
             <span>Sign In</span>
           </NavLink>
         </li>
